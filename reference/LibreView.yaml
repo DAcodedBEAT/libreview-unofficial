@@ -13,6 +13,7 @@ info:
   termsOfService: 'https://github.com/FokkeZB/libreview-unofficial#disclaimer'
   license:
     name: MIT
+    identifier: MIT
     url: 'https://spdx.org/licenses/MIT.html'
 externalDocs:
   url: 'https://libreview-unofficial.stoplight.io/'
@@ -95,7 +96,7 @@ paths:
         '200':
           $ref: '#/components/responses/User'
       operationId: get-user
-      description: 'Get the logged in user data.  '
+      description: 'Get the logged in user data.'
       requestBody:
         content: {}
       parameters:
@@ -3819,8 +3820,8 @@ components:
         application/json:
           schema:
             oneOf:
-              - $ref: '#/components/responses/User'
-              - $ref: '#/components/responses/LoginRedirect'
-              - $ref: '#/components/responses/LoginTerms'
+              - $ref: '#/components/responses/User/content/schema'
+              - $ref: '#/components/responses/LoginRedirect/content/schema'
+              - $ref: '#/components/responses/LoginTerms/content/schema'
 security:
   - token: []
